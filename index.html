@@ -315,7 +315,68 @@ display:block;
 text-align:center;
 width:100%;
 }
+.gallery{
+padding:50px 20px;
+text-align:center;
+}
 
+.gallery h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.gallery p{
+font-size:18px;
+color:#666;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.gallery-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+padding-bottom:20px;
+}
+
+.gallery-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.gallery-card h3{
+font-size:24px;
+margin:15px 0 8px;
+}
+
+.gallery-card p{
+padding:0 15px;
+}
+
+.gallery-card .buy-btn{
+margin:15px;
+display:block;
+}
+
+
+@media(max-width:768px){
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery h2{
+font-size:32px;
+}
+
+}
 }
 </style>
 
@@ -419,8 +480,41 @@ and premium quality fabric.
 </div>
 
 </div>
-
 </section>
+<section class="gallery">
+
+<h2>Our Complete Suit Gallery</h2>
+
+<p>Explore our latest ladies suits collection</p>
+
+<div class="gallery-grid">
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=800">
+<h3>Designer Suit Collection</h3>
+<p>Premium quality suit for every occasion.</p>
+<a href="https://wa.me/919582360215" class="buy-btn">WhatsApp Inquiry</a>
+</div>
+
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800">
+<h3>Festive Wear Suit</h3>
+<p>Beautiful festive collection with elegant designs.</p>
+<a href="https://wa.me/919582360215" class="buy-btn">WhatsApp Inquiry</a>
+</div>
+
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800">
+<h3>Party Wear Suit</h3>
+<p>Stylish collection for special occasions.</p>
+<a href="https://wa.me/919582360215" class="buy-btn">WhatsApp Inquiry</a>
+</div>
+
+</div>
+
+</section>f
 <footer>
 <p>© 2026 Shree Radhey Cosmetics & Garments. All Rights Reserved.</p>
 </footer></body>
