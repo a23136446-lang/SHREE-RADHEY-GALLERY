@@ -124,7 +124,29 @@ collection for every customer.
 
 </section>
 <section class="collection">
+<div class="search-box">
 
+<input
+type="text"
+placeholder="Search your favourite suit...">
+
+<div class="categories">
+
+<button>All</button>
+
+<button>Cotton</button>
+
+<button>Party Wear</button>
+
+<button>Printed</button>
+
+<button>Festival</button>
+
+<button>New Arrival</button>
+
+</div>
+
+</div>
 <h2 style="text-align:center;font-size:38px;margin-bottom:10px;">
 Our Latest Collection
 </h2>
@@ -202,7 +224,65 @@ font-weight:bold;
 .buy-btn:hover{
 background:#e6395c;
 }
+.search-box{
+max-width:900px;
+margin:50px auto;
+padding:0 20px;
+text-align:center;
+}
 
+.search-box input{
+width:100%;
+max-width:500px;
+padding:15px 20px;
+font-size:18px;
+border-radius:40px;
+border:2px solid #ff4b6e;
+outline:none;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
+}
+
+.categories button{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+background:#ff4b6e;
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.categories button:hover{
+background:#222;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:32px;
+}
+
+.hero h2{
+font-size:42px;
+}
+
+.products{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:360px;
+}
+
+}
 </style>
 
 <div class="products">
