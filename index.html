@@ -468,29 +468,6 @@ grid-template-columns:1fr;
 font-size:32px;
 }
 }
-
-.gallery-categories{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-margin:30px 0;
-}
-
-.gallery-categories button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-background:#ff4b6e;
-color:white;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.gallery-categories button:hover{
-background:#222;
-transform:translateY(-3px);
 }
 
 @media(max-width:768px){
@@ -525,6 +502,18 @@ object-fit:cover;
 }
 
 .gallery-card h3{
+    .gallery h2{
+    font-size:32px;
+}
+
+.gallery-categories{
+    gap:10px;
+}
+
+.gallery-categories button{
+    width:90%;
+    max-width:300px;
+}
 padding:15px 15px 5px;
 font-size:22px;
 }
