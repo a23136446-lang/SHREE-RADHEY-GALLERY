@@ -121,19 +121,12 @@ type="text"
 placeholder="Search your favourite suit...">
 
 <div class="categories">
-
-<button class="filter-btn" data-filter="all">All Collection</button>
-
-<button class="filter-btn" data-filter="glace-organza">GLACE ORGANZA</button>
-
-<button class="filter-btn" data-filter="cotton">Cotton</button>
-
-<button class="filter-btn" data-filter="heavy-cotton">HEAVY COTTON</button>
-
-<button class="filter-btn" data-filter="printed">Printed</button>
-
-<button class="filter-btn" data-filter="festival">Festival</button>
-
+  <button class="filter-btn" data-filter="all">All Collection</button>
+  <button class="filter-btn" data-filter="glace-organza">GLACE ORGANZA</button>
+  <button class="filter-btn" data-filter="cotton">Cotton</button>
+  <button class="filter-btn" data-filter="heavy-cotton">HEAVY COTTON</button>
+  <button class="filter-btn" data-filter="printed">Printed</button>
+  <button class="filter-btn" data-filter="festival">Festival</button>
 </div>
 </div>
 <section class="gallery">
@@ -717,30 +710,26 @@ Chat on WhatsApp
 </section>
 <footer>
 <p>© 2026 Shree Radhey Cosmetics & Garments. All Rights Reserved.</p>
- <script>
-document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".gallery-card");
 
-    const buttons = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".gallery-card");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
 
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
+      cards.forEach(card => {
+        card.style.display =
+          filter === "all" || card.classList.contains(filter)
+            ? "block"
+            : "none";
+      });
 
-            const filter = this.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                if (filter === "all" || card.classList.contains(filter)) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            buttons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-        });
+      buttons.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
     });
-
+  });
 });
 </script>
 </footer></body>
