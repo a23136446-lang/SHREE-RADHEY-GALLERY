@@ -716,5 +716,31 @@ Chat on WhatsApp
 </section>
 <footer>
 <p>© 2026 Shree Radhey Cosmetics & Garments. All Rights Reserved.</p>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".gallery-card");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            const filter = this.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+});
+</script>
 </footer></body>
 </html>
